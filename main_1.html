@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Звіт з курсу</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      display: flex;
+    }
+
+    .sidebar {
+      width: 250px;
+      padding: 10px;
+    }
+
+    .sidebar button {
+      display: block;
+      width: 100%;
+      margin: 10px 0;
+      padding: 10px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .content {
+      flex: 1;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .header {
+      text-align: center;
+      padding: 10px;
+    }
+
+    .header h1 {
+      margin: 0;
+    }
+
+    .header .sub {
+      margin-top: 5px;
+    }
+
+    .student-info {
+      margin-top: 10px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .photo {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      border: 1px solid black;
+      padding: 5px;
+      width: 120px;
+      text-align: center;
+    }
+
+    #output {
+      border: 1px solid black;
+      margin-top: 20px;
+      padding: 20px;
+      text-align: center;
+    }
+    .test{
+      width: 800px;
+      padding-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>ЗВІТ</h1>
+    <div class="sub">з курсу The Complete Full-Stack Web Development Bootcamp</div>
+    <div><b>З ДИСЦИПЛІНИ «WEB-ОРІЄНТОВАНІ ТЕХНОЛОГІЇ. ОСНОВИ FRONTEND та BACKEND РОЗРОБОК»</b></div>
+  </div>
+
+  <div class="student-info">
+    Студент гр. ІС-22 Швецова Анна Віталіївна
+  </div>
+
+  <div class="photo">
+    <img src="img/prof.jpg" style="width:100px;height:120px;">
+  </div>
+
+  <div class="container">
+    <div class="sidebar">
+      <button onclick="showContent(1)">НАЗВА КУРСУ<br>Посилання на курс</button>
+      <button onclick="showContent(2)">Посилання на<br>репозиторій</button>
+      <button onclick="showContent(3)">СЕРТИФІКАТ</button>
+      <button onclick="showContent(4)">ЗМІСТ курсу<br>Назви розділів</button>
+      <button onclick="showContent(5)">ТЕСТИ по темам</button>
+      <button onclick="showContent(6)">ВПРАВИ з кодування</button>
+      <button onclick="showContent(7)">ВИСНОВКИ</button>
+    </div>
+
+    <div class="content">
+      <div id="output">
+        Місце виведення інформації
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function showContent(num) {
+      const content = {
+        1: '<b>Назва курсу:</b> The Complete Full-Stack Web Development Bootcamp<br><b>Посилання:</b> <a href="#">https://ua.udemy.com/course/the-complete-web-development-bootcamp/learn/lecture/12638830#overview</a>'+
+        '<img src = "./img/course.png"/>',
+        2: '<b>Посилання на репозиторій:</b> <a href="https://github.com/annashvetsova21/WEB-2025" target="_blank">https://github.com/annashvetsova21/WEB-2025</a>',
+        3: '<b><h2>Сертифікат</h2></b><br><h2>Пройдено за 3 тижні</h2><img class = "test" src = "./img/serf2.jpg"/>',
+        4: '<b>Зміст курсу:</b><ul><li>Front-End Web Development</li> <li>HTML 5</li><li>CSS 3</li><li>Bootstrap 4</li>'+
+        '<li>JavaScript ES6</li><li>DOM Manipulation</li><li>jQuery</li><li>Bash Command Line</li><li>Git, GitHub and Version Control</li><li>Backend Web Development</li>'+
+        '<li>Node.js</li><li>NPM</li><li>Express.js</li><li>EJS</li><li>REST</li><li>APIs</li><li>Databases</li><li>SQL</li><li>MongoDB</li>'+
+        '<li>Authentication</li><li>Firebase</li><li>React.js</li><li>React Hooks</li><li>Web Design</li></ul>',
+        5: '<b>Тестування:</b><br>Перелік тестів і результати' + 
+        '<h3>Test 1. CSS Quiz - 3/3</h3><img class = "test" src = "./img/t1_1.jpg"/><img class = "test" src = "./img/t1_2.jpg"/><img class = "test" src = "./img/t1_3.jpg"/><img class = "test" src = "./img/t1_r.jpg"/>' +
+        '<h3>Test 2. Javascript Variable Naming Quiz - 2/2</h3><img class = "test" src = "./img/t2_1.jpg"/><img class = "test" src = "./img/t2_2.jpg"/><img class = "test" src = "./img/t2_r.jpg"/>'+
+        '<h3>Test 3.  Javascript Numbers Quiz - 2/3</h3><img class = "test" src = "./img/t3_1.jpg"/>'+
+        '<img class = "test" src = "./img/t3_2.jpg"/><img class = "test" src = "./img/t3_3.jpg"/><img class = "test" src = "./img/t3_r.jpg"/>'+
+        '<h3>Test 4.  JavaScript Functions Quiz - 5/5</h3><img class = "test" src = "./img/t4_1.jpg"/><img class = "test" src = "./img/t4_2.jpg"/>'+
+        '<img class = "test" src = "./img/t4_3.jpg"/><img class = "test" src = "./img/t4_4.jpg"/><img class = "test" src = "./img/t4_5.jpg"/>'+
+        '<img class = "test" src = "./img/t4_r.jpg"/>'+
+        '<h3>Test 5.  JavaScript Functions Quiz - 5/5</h3><img class = "test" src = "./img/t5_1.jpg"/><img class = "test" src = "./img/t5_2.jpg"/>'+
+        '<img class = "test" src = "./img/t5_3.jpg"/><img class = "test" src = "./img/t5_4.jpg"/><img class = "test" src = "./img/t5_5.jpg"/>'+
+        '<img class = "test" src = "./img/t5_r.jpg"/>',
+        6: '<b>Вправи:</b></br><img class = "test" src = "./img/v1.png"/><img class = "test" src = "./img/v2.png"/>'+
+         '<img class = "test" src = "./img/v3.png"/><img class = "test" src = "./img/v4.png"/><img class = "test" src = "./img/v5.png"/>'+
+         '<img class = "test" src = "./img/v6.png"/><img class = "test" src = "./img/v7.png"/>',
+        7: '<b>Висновки:</b><br>Курс дозволив набути практичні навички фулстек веб-розробки, роботи з GitHub, базами даних і тд. Дякуємо! :)'
+      };
+      document.getElementById('output').innerHTML = content[num] || 'Немає даних.';
+    }
+  </script>
+
+</body>
+</html>
